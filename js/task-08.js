@@ -8,3 +8,11 @@
 // Размеры самого первого div - 30px на 30px
 // Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
+
+const inputEl = document.querySelector('input#font-size-control');
+
+const buttonElRender = document.querySelector('button[0].dataset.render');
+console.dir (buttonElRender);
+
+const buttonElDestroy = document.querySelector('button').dataset.destroy;
+console.dir (buttonElRender);

@@ -12,7 +12,7 @@ console.log(buttonElDecrement);
 const buttonElIncrement = document.querySelector('button[data-action="increment"]');
 console.log(buttonElIncrement);
 
-let currentValue =  parseInt(document.querySelector('span#value').textContent);
+let currentValue = 0;
 
 console.log (currentValue);
 

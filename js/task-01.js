@@ -27,14 +27,31 @@
 
 // 2.------------------
 
-const categories = document.querySelector('ul#categories');
+// const categories = document.querySelector('ul#categories');
 
-console.log(`В списке ${categories.querySelectorAll('li.item').length} элементa`);
+// console.log(`В списке ${categories.querySelectorAll('li.item').length} элементa`);
 
-for (let titleElement of categories.querySelectorAll('h2')) {
-  console.log(`Категория: ${
-    titleElement.textContent}`);
-  console.log ('Количество элементов:',
-    titleElement.parentNode.querySelectorAll('ul > li').length
-  );
+// const allElementsTitle = categories.querySelectorAll('h2');  
+
+// for (let titleElement of categories.querySelectorAll('h2')) {
+//   console.log(`Категория: ${
+//     titleElement.textContent}`);
+//   console.log ('Количество элементов:',
+//     titleElement.parentNode.querySelectorAll('ul > li').length
+//   );
+// }
+// ------------------------------------------------
+const categoriesList = document.querySelector('ul#categories');
+const categories = categoriesList.querySelectorAll('li.item');
+console.log(`В списке ${categories.length} элементa`);
+
+
+function showCategoryDetails(categories){
+  const categoryItem = Object.values(categories);
+    const categoryDetails = categoryItem.map(category=>{
+      console.log (`Категория:${category.querySelector('h2').textContent}`);
+      console.log (`Количество элементов:${category.querySelectorAll('li').length}`);
+    });
 }
+
+showCategoryDetails(categories);

@@ -8,12 +8,18 @@ const ingredients = [
   'Приправы',
 ];
 
-for (let ingredient of ingredients){ 
-  const listEl = document.getElementById('ingredients');
-  const ingredientEl = document.createElement('li');
-  ingredientEl.textContent = ingredient;
-  listEl.appendChild(ingredientEl);
+const listEl = document.getElementById('ingredients'); 
+console.log(listEl);
+
+const makeList = function (list){
+    // console.log (list);
+    const ingredientsListEl = list.map(listItem=>{
+    const ingredientEl = document.createElement('li');
+    ingredientEl.textContent = listItem;
+    console.log (ingredientEl);
+    return ingredientEl;
+    })
+  return (listEl.append(...ingredientsListEl));
 }
 
-
-
+makeList(ingredients);
