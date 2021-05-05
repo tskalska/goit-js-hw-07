@@ -12,7 +12,7 @@
 const inputEl = document.querySelector('input#font-size-control');
 
 const buttonElRender = document.querySelector('button[0].dataset.render');
-console.dir (buttonElRender);
+console.dir(buttonElRender);
 
 const buttonElDestroy = document.querySelector('button').dataset.destroy;
-console.dir (buttonElRender);
+console.dir(buttonElRender);
